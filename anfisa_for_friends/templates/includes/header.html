@@ -26,12 +26,9 @@
           </li>
           <li class="nav-item">
             <a class="nav-link
-            {% if request.resolver_match.view_name in 'ice_cream:ice_cream_list' %}
+            {% if request.resolver_match.view_name == 'ice_cream:ice_cream_list' %}
                 active 
-            {% endif %}
-            {% if request.resolver_match.view_name in 'ice_cream:ice_cream_detail' %}
-                active 
-            {% endif %}"            
+            {% endif %}"          
             href="{% url 'ice_cream:ice_cream_list' %}">
               Каталог мороженого
             </a> 
